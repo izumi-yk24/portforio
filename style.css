@@ -1,0 +1,294 @@
+@charset"UTF-8";
+
+:root{
+  --kinari: white;
+  --sumi: #262626;
+  --ai: #F86439;
+  --beni: #42e689;
+  --outo: #F4BB54;
+}
+ 
+*{ box-sizing: border-box; margin:0; padding:0; }
+ 
+html, body{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;           /* ← スクロール禁止 */
+  background: var(--kinari-deep);
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  color: var(--sumi);
+}
+ 
+.top{
+  position: relative;
+  height: 100vh;
+  height: 100dvh;             /* モバイルのアドレスバー分もケア */
+  width: 100vw;
+  display: flex;
+}
+ 
+/* ================= メインカード ================= */
+.card-main{
+  position:relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  background: transparent;
+  box-shadow: 0 1px 0 white;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding: 0 7vw;
+}
+ 
+.card-main::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-color: #B0D6F2;
+  pointer-events:none;
+}
+ 
+.card-index{
+  position:absolute;
+  top: 26px;
+  left: 30px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size: 12px;
+  letter-spacing:.1em;
+  color: var(--sumi);
+  opacity:.45;
+}
+.card-index .num{
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  display:flex; align-items:center; justify-content:center;
+  font-size: 11px;
+}
+ 
+.mark{
+  position:absolute;
+  top: 26px;
+  right: 34px;
+  font-family:"Shippori Mincho B1", serif;
+  font-weight:700;
+  font-size: 12px;
+  letter-spacing:.22em;
+  color: var(--sumi);
+  opacity:.5;
+}
+ 
+.hero{
+  position: relative;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap: 18px;
+  max-width: 40em;
+}
+
+.hero p{
+  font-size: 24px;
+}
+ 
+.eyebrow{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  font-size: 12px;
+  letter-spacing:.28em;
+  color: var(--beni);
+  font-weight:700;
+}
+.eyebrow::before{
+  content:"";
+  width: 24px;
+  height: 1px;
+  background: var(--beni);
+}
+ 
+h1{
+  font-family:"Shippori Mincho B1", serif;
+  font-weight:700;
+  line-height:1.25;
+  font-size: clamp(28px, 4.2vw, 54px);
+  color: var(--sumi);
+  letter-spacing:.02em;
+}
+h1 .accent{ color: var(--ai); }
+ 
+.lead{
+  font-size: clamp(13px, 1.1vw, 15px);
+  line-height:1.9;
+  color: var(--sumi);
+  opacity:.75;
+}
+ 
+.cta{
+  margin-top: 6px;
+  display:inline-flex;
+  align-items:center;
+  gap: 10px;
+  padding: 12px 26px;
+  background: var(--sumi);
+  color: var(--kinari);
+  text-decoration:none;
+  border-radius: 999px;
+  font-size: 13px;
+  letter-spacing:.14em;
+  font-weight:700;
+  transition: background .25s ease, transform .25s ease;
+}
+.cta:hover{ background: var(--ai); transform: translateX(2px); }
+.cta svg{ width:12px; height:12px; }
+ 
+.year{
+  position:absolute;
+  bottom: 26px;
+  left: 30px;
+  font-size: 11px;
+  letter-spacing:.12em;
+  color: var(--sumi);
+  opacity:.4;
+}
+ 
+/* ================= 右：横に重なったカード群 ================= */
+.stack{
+  display:flex;
+  flex-direction:row;
+  flex: 0 0 auto;
+  height: 100%;
+}
+ 
+.card{
+  --tone: var(--ai);
+  position:relative;
+  flex: 0 0 auto;
+  height: 100%;
+  width: 72px;
+  margin-left: -30px;
+  background: var(--tone);
+  border-radius: 1px;
+  box-shadow: -8px 0 16px rgba(42,37,34,0.10);
+  overflow:hidden;
+  text-decoration:none;
+  cursor:pointer;
+  transition: width .45s cubic-bezier(.22,1,.36,1), margin-left .45s cubic-bezier(.22,1,.36,1), box-shadow .3s ease;
+  animation: settle .6s ease both;
+}
+.card:first-child{ margin-left: 0; }
+ 
+.card:nth-child(1){ --tone: var(--beni); animation-delay:.05s; z-index: 1; }
+.card:nth-child(2){ --tone: var(--outo); animation-delay:.15s; z-index: 2; }
+.card:nth-child(3){ --tone: var(--ai); animation-delay:.25s; z-index: 3; }
+ 
+.card:hover, .card:focus-visible{
+  width: 176px;
+  z-index: 10;
+  box-shadow: -10px 0 22px rgba(42,37,34,0.16);
+}
+.card:focus-visible{ outline: 2px solid var(--kinari); outline-offset:-4px; }
+ 
+.card-num{
+  position:absolute;
+  top: 16px; left: 16px;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 1px solid rgba(253,251,245,0.6);
+  color: var(--kinari);
+  display:flex; align-items:center; justify-content:center;
+  font-size: 10px;
+  letter-spacing:.02em;
+}
+ 
+.card-jp{
+  position:absolute;
+  top: 16px; right: 16px;
+  writing-mode: vertical-rl;
+  font-size: 10px;
+  letter-spacing:.15em;
+  color: rgba(253,251,245,0.7);
+}
+ 
+.card-label{
+  position:absolute;
+  left: 16px; bottom: 18px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-family:"Shippori Mincho B1", serif;
+  font-weight:700;
+  font-size: 16px;
+  letter-spacing:.18em;
+  color: var(--kinari);
+}
+ 
+.card-icon{
+  position:absolute;
+  right: 18px; bottom: 18px;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: rgba(253,251,245,0.18);
+  display:flex; align-items:center; justify-content:center;
+  opacity:0;
+  transform: scale(.7);
+  transition: opacity .3s ease .1s, transform .3s ease .1s;
+}
+.card:hover .card-icon, .card:focus-visible .card-icon{
+  opacity:1; transform: scale(1);
+}
+.card-icon svg{ width:14px; height:14px; }
+ 
+.card-en{
+  position:absolute;
+  left: 60px; bottom: 20px;
+  font-family:"Shippori Mincho B1", serif;
+  font-weight:700;
+  font-size: 20px;
+  color: var(--kinari);
+  white-space:nowrap;
+  opacity:0;
+  transform: translateX(8px);
+  transition: opacity .3s ease .1s, transform .35s ease .1s;
+}
+.card:hover .card-en, .card:focus-visible .card-en{
+  opacity:1; transform: translateX(0);
+}
+ 
+@keyframes settle{
+  from{ transform: translateY(16px); opacity:0; }
+  to{ transform: translateY(0); opacity:1; }
+}
+ 
+@media (prefers-reduced-motion: reduce){
+  .card, .card-icon, .card-en, .cta{ transition:none; animation:none; }
+}
+ 
+/* ---- レスポンシブ：1画面固定を維持しつつ縮小 ---- */
+@media (max-width: 860px){
+  .top{ padding: 14px; gap: 10px; }
+  .card-main{ padding: 0 6vw; border-radius: 22px; }
+  .card{ width: 56px; margin-left: -22px; border-radius: 18px; }
+  .card:hover, .card:focus-visible{ width: 120px; }
+  .card-label{ font-size: 14px; }
+  .card-en{ font-size: 16px; left: 46px; }
+  .year{ display:none; }
+}
+ 
+@media (max-width: 480px){
+  .top{ padding: 10px; gap: 8px; }
+  .card-main{ padding: 0 20px; border-radius: 18px; }
+  .mark{ display:none; }
+  .card-index{ font-size: 10px; }
+  .lead{ font-size: 12px; }
+  .cta{ padding: 10px 20px; font-size: 12px; }
+  .card{ width: 44px; margin-left: -18px; border-radius: 14px; }
+  .card:hover, .card:focus-visible{ width: 98px; }
+  .card-num{ width:18px; height:18px; font-size:9px; }
+  .card-jp{ display:none; }
+  .card-label{ font-size: 12px; bottom: 14px; left: 12px; }
+  .card-icon{ width: 26px; height: 26px; right: 12px; bottom: 12px; }
+  .card-en{ font-size: 13px; left: 38px; bottom: 15px; }
+}
