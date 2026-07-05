@@ -295,7 +295,7 @@ h1 .accent{ color: var(--ai); }
 }
 
 /* works.css: WORKページ専用。style.css の共通トークン(--kinari等)を前提にしてます */
-html.works-page,
+
 body.works-body{
   height: auto;
   overflow: auto;         /* ← TOPページと違い、こっちはスクロールOK */
@@ -496,16 +496,6 @@ body.works-body{
   transform:none;
   box-shadow: 0 1px 0 rgba(38,38,38,0.05);
 }
-
-
-
-
-
-
-
-
-
-
 
 /* ---- レスポンシブ ---- */
 @media (max-width: 640px){
