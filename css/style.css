@@ -267,6 +267,108 @@ h1 .accent{ color: var(--ai); }
   .card, .card-icon, .card-en, .cta{ transition:none; animation:none; }
 }
 
+/* ================= skill================= */
+
+.skill-section{
+  margin-bottom: 48px;
+}
+
+.skill-section-title{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  font-family:"Shippori Mincho B1", serif;
+  font-weight:700;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.skill-num{
+  font-family:"Zen Kaku Gothic New", sans-serif;
+  font-size: 11px;
+  font-weight:700;
+  letter-spacing:.1em;
+  color: var(--sumi);
+  opacity:.4;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+.skill-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.skill-card{
+  --tone: var(--ai);
+  background: var(--kinari);
+  border-radius: 16px;
+  padding: 20px 22px;
+  box-shadow: 0 1px 0 rgba(38,38,38,0.05);
+}
+
+.skill-name{
+  display:block;
+  font-family:"Shippori Mincho B1", serif;
+  font-weight:700;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.skill-bar{
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(38,38,38,0.08);
+  overflow:hidden;
+  margin-bottom: 12px;
+}
+.skill-bar span{
+  display:block;
+  height: 100%;
+  background: var(--tone);
+  border-radius: inherit;
+}
+
+.skill-card p{
+  font-size: 12px;
+  line-height:1.8;
+  opacity:.7;
+}
+
+.skill-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 10px;
+}
+.skill-tags span{
+  font-size: 12px;
+  letter-spacing:.04em;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--kinari);
+  box-shadow: 0 1px 0 rgba(38,38,38,0.05);
+}
+
+.skill-section--highlight{
+  background: rgba(248,100,57,0.06);
+  border-radius: 20px;
+  padding: 28px 28px 32px;
+}
+
+.skill-note{
+  margin-top: 18px;
+  font-size: 13px;
+  line-height:1.9;
+  opacity:.75;
+  max-width: 42em;
+}
+
+@media (max-width: 640px){
+  .skill-section--highlight{ padding: 20px; }
+}
+
 /* ---- レスポンシブ：1画面固定を維持しつつ縮小 ---- */
 @media (max-width: 860px){
   .top{ padding: 14px; gap: 10px; }
@@ -295,7 +397,7 @@ h1 .accent{ color: var(--ai); }
 }
 
 /* works.css: WORKページ専用。style.css の共通トークン(--kinari等)を前提にしてます */
-
+html.works-page,
 body.works-body{
   height: auto;
   overflow: auto;         /* ← TOPページと違い、こっちはスクロールOK */
@@ -496,6 +598,16 @@ body.works-body{
   transform:none;
   box-shadow: 0 1px 0 rgba(38,38,38,0.05);
 }
+
+
+
+
+
+
+
+
+
+
 
 /* ---- レスポンシブ ---- */
 @media (max-width: 640px){
