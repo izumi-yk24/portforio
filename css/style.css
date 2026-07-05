@@ -2,7 +2,7 @@
 
 :root{
   --kinari: white;
-  --kinari-deep: #F1EAD9;
+  --kinari-deep: white;
   --sumi: #262626;
   --ai: #F86439;
   --beni: #42e689;
@@ -14,7 +14,7 @@
 html, body{
   height: 100%;
   width: 100%;
-  overflow: hidden;           /* ← スクロール禁止（TOPページ用） */
+  overflow: hidden;
   background: var(--kinari-deep);
   font-family: "Zen Kaku Gothic New", sans-serif;
   color: var(--sumi);
@@ -413,7 +413,7 @@ body.works-body{
   align-items:center;
   justify-content:space-between;
   padding: 20px 32px;
-  background: rgba(241,234,217,0.85);
+  background: lightblue;
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(38,38,38,0.08);
 }
