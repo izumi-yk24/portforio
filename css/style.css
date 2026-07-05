@@ -400,7 +400,7 @@ h1 .accent{ color: var(--ai); }
 html.works-page,
 body.works-body{
   height: auto;
-  overflow: auto;         /* ← TOPページと違い、こっちはスクロールOK */
+  overflow: auto; 
   background: var(--kinari-deep);
 }
 
