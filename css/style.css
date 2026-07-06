@@ -495,7 +495,7 @@ body.works-body{
   content:"";
   width: 24px;
   height: 1px;
-  background: var(--beni);
+  background: lightblue;
 }
 
 .works-intro h1{
