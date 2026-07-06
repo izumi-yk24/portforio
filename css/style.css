@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
 :root{
-  --kinari: white;
-  --kinari-deep: white;
+  --kinari: #262626;
+  --kinari-deep: #262626;
   --sumi: #262626;
-  --ai: #F86439;
-  --beni: #42e689;
-  --outo: yellow;
+  --ai: #ffedab;
+  --beni: #ffedab;
+  --outo: #ffedab;
 }
 
 *{ box-sizing: border-box; margin:0; padding:0; }
@@ -46,7 +46,7 @@ html, body{
   content:"";
   position:absolute;
   inset:0;
-  background-color: #B0D6F2;
+  background-color:white;
   pointer-events:none;
 }
 
@@ -134,8 +134,8 @@ h1 .accent{ color: var(--ai); }
   align-items:center;
   gap: 10px;
   padding: 12px 26px;
-  background: var(--sumi);
-  color: var(--kinari);
+  background: #ffedab;
+  color: #262626;
   text-decoration:none;
   border-radius: 999px;
   font-size: 13px;
@@ -303,7 +303,7 @@ h1 .accent{ color: var(--ai); }
 
 .skill-card{
   --tone: var(--ai);
-  background: var(--kinari);
+  background:#ccc;
   border-radius: 16px;
   padding: 20px 22px;
   box-shadow: 0 1px 0 rgba(38,38,38,0.05);
@@ -327,7 +327,7 @@ h1 .accent{ color: var(--ai); }
 .skill-bar span{
   display:block;
   height: 100%;
-  background: var(--tone);
+  background: white;
   border-radius: inherit;
 }
 
@@ -347,7 +347,7 @@ h1 .accent{ color: var(--ai); }
   letter-spacing:.04em;
   padding: 8px 16px;
   border-radius: 999px;
-  background: var(--kinari);
+  background: #ccc;
   box-shadow: 0 1px 0 rgba(38,38,38,0.05);
 }
 
@@ -401,7 +401,7 @@ html.works-page,
 body.works-body{
   height: auto;
   overflow: auto; 
-  background: var(--kinari-deep);
+  background: white;
 }
 
 /* ================= ヘッダー ================= */
@@ -413,7 +413,7 @@ body.works-body{
   align-items:center;
   justify-content:space-between;
   padding: 20px 32px;
-  background: lightblue;
+  background: #ffedab;
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(38,38,38,0.08);
 }
@@ -423,7 +423,7 @@ body.works-body{
   font-weight:700;
   font-size: 13px;
   letter-spacing:.18em;
-  color: var(--sumi);
+  color: whitesmoke;
   text-decoration:none;
   opacity:.8;
 }
@@ -441,7 +441,7 @@ body.works-body{
   padding: 7px 14px;
   border-radius: 999px;
   background: transparent;
-  color: var(--sumi);
+  color: white;
   text-decoration:none;
   font-size: 12px;
   letter-spacing:.08em;
@@ -457,7 +457,7 @@ body.works-body{
 
 .mini-card.is-current{
   opacity: 1;
-  background: var(--sumi);
+  background: white;
   color: var(--kinari);
 }
 
@@ -523,7 +523,7 @@ body.works-body{
   position:relative;
   display:flex;
   flex-direction:column;
-  background: var(--kinari);
+  background: white;
   border-radius: 20px;
   overflow:hidden;
   text-decoration:none;
