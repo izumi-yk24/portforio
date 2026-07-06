@@ -17,11 +17,6 @@ a{
   text-decoration: none;
 }
 
-img, svg{
-  display: block;
-  max-width: 100%;
-}
-
 button, input, textarea, select{
   font: inherit;
   color: inherit;
