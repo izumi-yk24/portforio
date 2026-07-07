@@ -41,7 +41,10 @@
   <main class="detail-main">
 
     <a class="back-link" href="works.html">
-      <svg viewBox="0 0 16 16" fill="none"><path d="M13 8H3M3 8L7 4M3 8L7 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg viewBox="0 0 16 16" fill="none">
+        <path d="M13 8H3M3 8L7 4M3 8L7 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
       WORK 一覧に戻る
     </a>
 
@@ -95,13 +98,11 @@
         <div class="detail-overview">
           <h2>概要</h2>
           <p>
-            「松山観光協会」という架空の団体を想定し、道後温泉を中心とした観光情報サイトを制作しました。
-            浮世絵調のビジュアルを現代のWebデザインに落とし込むことをテーマに、配色・タイポグラフィ・
-            アニメーションを一貫した世界観でまとめています。
+            観葉植物のレンタルサービスを手がける架空企業のコーポレートサイトです。フォレストグリーン・アイボリー・ゴールドを基調にした配色で、企業の「自然」「誠実さ」というイメージを視覚的に伝えることを意識しました。
+
           </p>
           <p>
-            TOPページのほか、道後温泉の詳細を紹介するサブページ、地域のポッドキャストを紹介するページなど、
-            複数の下層ページで構成しています。
+            セマンティックなHTML構造を心がけ、スクリーンリーダーでも情報が正しく伝わるよう、見出しの階層やaltテキストの付け方を丁寧に確認しながら制作しました。
           </p>
         </div>
       </div>
@@ -114,15 +115,15 @@
       <ul class="detail-points">
         <li>
           <span class="point-label">配色設計</span>
-          <p>紅・藍・墨・黄土という日本の伝統色をCSS変数として定義し、サイト全体で一貫した配色になるよう管理しました。</p>
+          <p>フォレストグリーン・アイボリー・ゴールドの3色に絞って配色し、企業の「自然」「誠実さ」というイメージが伝わるよう意識しました。</p>
         </li>
         <li>
-          <span class="point-label">アニメーション</span>
-          <p>Canvasを使ったキャラクターの歩行・ダンスアニメーションを実装。パフォーマンスとのバランスを考えながら調整しました。</p>
+          <span class="point-label">アクセシビリティ</span>
+          <p>見出しタグの階層や画像のalt属性を見直し、セマンティックな構造に修正。見た目だけでなく、コードの意味づけそのものが正しく伝わる実装の大切さを学びました。</p>
         </li>
         <li>
-          <span class="point-label">レスポンシブ対応</span>
-          <p>複数のブレークポイントを跨ぐ中で、メディアクエリの記述順序やセレクタの詳細度による衝突を経験し、CSSの適用優先順位への理解を深めました。</p>
+          <span class="point-label">パーツの再利用設計</span>
+          <p>ナビゲーションやボタンなど繰り返し使う要素をCSSで整理し、あとから一括で調整できる構造にしました。</p>
         </li>
       </ul>
     </section>

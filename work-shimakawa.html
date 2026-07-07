@@ -41,7 +41,10 @@
   <main class="detail-main">
 
     <a class="back-link" href="works.html">
-      <svg viewBox="0 0 16 16" fill="none"><path d="M13 8H3M3 8L7 4M3 8L7 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg viewBox="0 0 16 16" fill="none">
+        <path d="M13 8H3M3 8L7 4M3 8L7 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
       WORK 一覧に戻る
     </a>
 
@@ -95,13 +98,10 @@
         <div class="detail-overview">
           <h2>概要</h2>
           <p>
-            「松山観光協会」という架空の団体を想定し、道後温泉を中心とした観光情報サイトを制作しました。
-            浮世絵調のビジュアルを現代のWebデザインに落とし込むことをテーマに、配色・タイポグラフィ・
-            アニメーションを一貫した世界観でまとめています。
+            架空の書店を想定したサイトで、jQueryのスライダーを使った新刊紹介や、レスポンシブなレイアウト設計を担当しました。書籍を「じっくり選ぶ」体験を意識し、情報を詰め込みすぎず、余白を活かしたレイアウトにしています。
           </p>
           <p>
-            TOPページのほか、道後温泉の詳細を紹介するサブページ、地域のポッドキャストを紹介するページなど、
-            複数の下層ページで構成しています。
+      
           </p>
         </div>
       </div>
@@ -113,16 +113,16 @@
       <h2>工夫した点・学んだこと</h2>
       <ul class="detail-points">
         <li>
-          <span class="point-label">配色設計</span>
-          <p>紅・藍・墨・黄土という日本の伝統色をCSS変数として定義し、サイト全体で一貫した配色になるよう管理しました。</p>
-        </li>
-        <li>
-          <span class="point-label">アニメーション</span>
-          <p>Canvasを使ったキャラクターの歩行・ダンスアニメーションを実装。パフォーマンスとのバランスを考えながら調整しました。</p>
+          <span class="point-label">スライダー実装</span>
+          <p>Slickスライダーで新刊書籍をカルーセル表示。導入時は「動けばOK」にせず、自動再生の秒数やスワイプの挙動など、オプション設定の意味を1つずつ確認しながら実装しました。</p>
         </li>
         <li>
           <span class="point-label">レスポンシブ対応</span>
-          <p>複数のブレークポイントを跨ぐ中で、メディアクエリの記述順序やセレクタの詳細度による衝突を経験し、CSSの適用優先順位への理解を深めました。</p>
+          <p>メディアクエリの記述順序（max-widthは広い方から狭い方へ）を意識せず書いたことで意図しない上書きが発生し、実際にバグを踏んで順序の重要性を体感しました。</p>
+        </li>
+        <li>
+          <span class="point-label">カード設計</span>
+          <p>書籍情報のカードをFlexboxで組み、画面幅が変わっても崩れにくいレイアウトを意識しました。</p>
         </li>
       </ul>
     </section>
@@ -131,10 +131,6 @@
     <nav class="detail-pager">
       <a class="pager-link" href="works.html">
         <span class="pager-label">一覧へ</span>
-      </a>
-      <a class="pager-link pager-link--next" href="work-midori.html">
-        <span class="pager-label">次の作品</span>
-        <span class="pager-title">緑株式会社（架空）</span>
       </a>
     </nav>
 
