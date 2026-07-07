@@ -11,6 +11,8 @@
     rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/works.css">
+  <link rel="stylesheet" href="css/about.css">
 </head>
 
 <body class="works-body">
@@ -40,68 +42,76 @@
 
   <main class="about-main">
 
-    <!-- ================= ヒーロー ================= -->
-    <section class="about-hero">
-      <span class="about-watermark" aria-hidden="true">泉</span>
+    <!-- ================= レジュメカード ================= -->
+    <section class="resume-card">
 
-      <div class="about-hero-inner">
-        <span class="about-eyebrow">ABOUT</span>
-        <h1>岡村 泉<br><span class="about-en">Izumi Okamura</span></h1>
-        <p class="about-statement">
-          総務・広報として3年働いたのち、Webの世界へ。<br>
-          「作って終わり」じゃなく、使う人の気持ちに立ち戻れる制作者でありたいです。
-        </p>
+      <div class="resume-photo">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.4"/><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
       </div>
-    </section>
 
-    <!-- ================= プロフィール ================= -->
-    <section class="about-section">
-      <h2><span class="about-num">01</span>プロフィール</h2>
-      <dl class="about-meta">
-        <div>
-          <dt>現在</dt>
-          <dd>専門学校でWeb制作を学習中（2026年7月卒業予定）</dd>
-        </div>
-        <div>
-          <dt>前職</dt>
-          <dd>総務・広報（3年）</dd>
-        </div>
-        <div>
-          <dt>目指す環境</dt>
-          <dd>ワークライフバランスを重視できる事業会社のWeb担当、または小規模な制作会社</dd>
-        </div>
-        <div>
-          <dt>GitHub</dt>
-          <dd><a href="https://github.com/izumi-yk24" target="_blank" rel="noopener">izumi-yk24 ↗</a></dd>
-        </div>
-      </dl>
-    </section>
+      <div class="resume-identity">
+        <h1>岡村 泉</h1>
+        <span class="resume-romaji">IZUMI OKAMURA</span>
+        <ul class="resume-contact">
+          <li>GitHub: <a href="https://github.com/izumi-yk24" target="_blank" rel="noopener">izumi-yk24</a></li>
+        </ul>
+      </div>
 
-    <!-- ================= 経歴タイムライン ================= -->
-    <section class="about-section">
-      <h2><span class="about-num">02</span>これまでの歩み</h2>
-      <ol class="timeline">
-        <li>
-          <span class="timeline-dot"></span>
-          <span class="timeline-year">2022 - 2025</span>
-          <p>一般企業にて総務・広報を担当。社内外の調整や資料作成、広報物のディレクションを経験。</p>
-        </li>
-        <li>
-          <span class="timeline-dot"></span>
-          <span class="timeline-year">2025</span>
-          <p>Web制作を学ぶため専門学校に入学。HTML/CSSから学習をスタート。</p>
-        </li>
-        <li>
-          <span class="timeline-dot"></span>
-          <span class="timeline-year">2026.07</span>
-          <p>専門学校を卒業予定。並行して就職活動、ポートフォリオを制作中。</p>
-        </li>
-      </ol>
+      <div class="resume-columns">
+
+        <div class="resume-block">
+          <h2>About me</h2>
+          <p class="resume-tagline">使う人の気持ちに立ち戻れる、Web制作者。</p>
+          <p>
+            総務・広報として3年働くなかで、「伝える」ことの難しさと面白さに気づき、
+            Webの世界へ進むことを決めました。ニーズを汲み取り、目的に合ったデザインを、
+            手を動かしながら考えられる制作者を目指しています。
+          </p>
+        </div>
+
+        <div class="resume-block">
+          <h2>Education</h2>
+          <dl class="resume-list">
+            <div><dt>2026.07</dt><dd>専門学校 Web学科 卒業見込み</dd></div>
+            <div><dt>2025.04</dt><dd>専門学校 Web学科 入学</dd></div>
+          </dl>
+        </div>
+
+        <div class="resume-block">
+          <h2>Work</h2>
+          <dl class="resume-list">
+            <div><dt>2022 - 2025</dt><dd>一般企業にて総務・広報を担当</dd></div>
+          </dl>
+        </div>
+
+        <div class="resume-block">
+          <h2>Skills</h2>
+          <div class="resume-skills">
+            <div class="resume-skill">
+              <span>HTML</span>
+              <div class="skill-bar"><span style="width:85%"></span></div>
+            </div>
+            <div class="resume-skill">
+              <span>CSS</span>
+              <div class="skill-bar"><span style="width:80%"></span></div>
+            </div>
+            <div class="resume-skill">
+              <span>JavaScript</span>
+              <div class="skill-bar"><span style="width:60%"></span></div>
+            </div>
+            <div class="resume-skill">
+              <span>jQuery</span>
+              <div class="skill-bar"><span style="width:65%"></span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <!-- ================= 大事にしていること ================= -->
     <section class="about-section">
-      <h2><span class="about-num">03</span>大事にしていること</h2>
+      <h2><span class="about-num">01</span>大事にしていること</h2>
       <div class="value-grid">
         <div class="value-card">
           <span class="value-title">余白と間</span>

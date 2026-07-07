@@ -702,12 +702,16 @@ body.works-body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--tone);
+  background: #ffedab;
 }
 
-.work-thumb img {
+.work-thumb img{
   height: 150px;
-}
+     /* width: 100%;
+     height: 100%;
+     object-fit: cover;  
+     object-position: top;   */
+   }
 
 .work-body {
   padding: 20px 22px 24px;
@@ -1437,6 +1441,268 @@ body.works-body {
   box-shadow: 0 1px 0 rgba(38,38,38,0.05);
 }
 
+/* work-detail.css: 作品詳細ページ専用。style.css / works.css の後に読み込む前提 */
+
+.detail-main{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 32px 100px;
+}
+
+.back-link{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing:.06em;
+  opacity:.6;
+  margin-bottom: 32px;
+  text-decoration:none;
+  color: var(--sumi);
+  transition: opacity .2s ease, transform .2s ease;
+}
+.back-link:hover{ opacity: 1; transform: translateX(-2px); }
+.back-link svg{ width:14px; height:14px; }
+
+/* ================= ヒーロー ================= */
+.detail-hero{
+  --tone: var(--ai);
+  background: var(--tone);
+  color: var(--kinari);
+  border-radius: 24px;
+  padding: 48px 40px;
+  margin-bottom: 40px;
+}
+
+.detail-tag{
+  display:inline-block;
+  font-size: 11px;
+  letter-spacing:.14em;
+  font-weight:700;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(253,251,245,0.2);
+  margin-bottom: 16px;
+}
+
+.detail-hero h1{
+  font-family:"Shippori Mincho B1", serif;
+  font-weight:700;
+  font-size: clamp(26px, 3.4vw, 38px);
+  margin-bottom: 10px;
+}
+
+.detail-sub{
+  font-size: 13px;
+  opacity:.85;
+}
+
+/* ================= セクション共通 ================= */
+.detail-section{
+  margin-bottom: 48px;
+}
+
+.detail-section h2{
+  font-family:"Shippori Mincho B1", serif;
+  font-weight:700;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+/* ================= 概要グリッド ================= */
+.detail-grid{
+  display:grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+}
+
+.detail-meta dl > div{
+  margin-bottom: 18px;
+}
+.detail-meta dt{
+  font-size: 11px;
+  letter-spacing:.1em;
+  opacity:.5;
+  margin-bottom: 6px;
+}
+.detail-meta dd{
+  font-size: 13px;
+}
+
+.tag-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 6px;
+}
+.tag-list span{
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(38,38,38,0.06);
+}
+
+.link-list{
+  display:flex;
+  flex-direction:column;
+  gap: 6px;
+}
+.link-list a{
+  font-size: 12.5px;
+  color: var(--sumi);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.detail-overview p{
+  font-size: 13.5px;
+  line-height:1.95;
+  opacity:.8;
+  margin-bottom: 14px;
+}
+
+/* ================= ギャラリー ================= */
+.detail-gallery{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 10px;
+}
+.gallery-item{
+  --tone: var(--ai);
+  height: 160px;
+  border-radius: 14px;
+  background: var(--tone);
+  opacity: .85;
+}
+.gallery-note{
+  font-size: 11px;
+  opacity:.45;
+}
+
+/* ================= 工夫した点 ================= */
+.detail-points{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap: 20px;
+}
+.detail-points li{
+  padding-left: 18px;
+  border-left: 2px solid rgba(38,38,38,0.12);
+}
+.point-label{
+  display:block;
+  font-family:"Shippori Mincho B1", serif;
+  font-weight:700;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.detail-points p{
+  font-size: 12.5px;
+  line-height:1.9;
+  opacity:.75;
+}
+
+/* ================= ページャー ================= */
+.detail-pager{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-top: 1px solid rgba(38,38,38,0.1);
+  padding-top: 28px;
+  margin-top: 20px;
+}
+
+.pager-link{
+  text-decoration:none;
+  color: var(--sumi);
+}
+
+.pager-link--next{
+  text-align:right;
+}
+
+.pager-label{
+  display:block;
+  font-size: 10px;
+  letter-spacing:.1em;
+  opacity:.5;
+  margin-bottom: 4px;
+}
+
+.pager-title{
+  font-family:"Shippori Mincho B1", serif;
+  font-weight:700;
+  font-size: 14px;
+}
+
+/* ================= バナー詳細ページ：variant セクション ================= */
+.banner-variant{
+  --tone: var(--ai);
+  border-left: 3px solid var(--tone);
+  padding-left: 22px;
+}
+
+.banner-variant h2{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+
+.variant-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--tone);
+  color: var(--kinari);
+  font-size: 12px;
+  font-weight:700;
+}
+
+.banner-gallery{
+  margin-bottom: 24px;
+}
+.banner-gallery img{
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 1px 0 rgba(38,38,38,0.05);
+}
+
+/* ================= コーポレートカラー チップ ================= */
+.color-list{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap: 8px 14px;
+  font-size: 12.5px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+.color-chip{
+  --chip: #999;
+  display:inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--chip);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
+  margin-right: 2px;
+  vertical-align: middle;
+}
+
+/* ================= レスポンシブ ================= */
+@media (max-width: 700px){
+  .detail-main{ padding: 28px 18px 80px; }
+  .detail-hero{ padding: 32px 24px; }
+  .detail-grid{ grid-template-columns: 1fr; gap: 24px; }
+  .banner-variant{ padding-left: 16px; }
+}
+
+
+
 /* ================= レスポンシブ ================= */
 @media (max-width: 700px){
   .detail-main{ padding: 28px 18px 80px; }
@@ -1476,7 +1742,293 @@ body.works-body {
 }
 
 
+/* about.css: ABOUTページ専用。style.css / works.css の後に読み込む前提 */
 
+.about-main{
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 56px 32px 100px;
+}
+
+/* ================= レジュメカード ================= */
+.resume-card{
+  position: relative;
+  border-radius: 28px;
+  box-shadow: 0 1px 0 rgba(38,38,38,0.05), 0 24px 48px rgba(38,38,38,0.06);
+  padding: 48px 44px;
+  display:grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+    "photo columns"
+    "identity columns";
+  gap: 8px 40px;
+  margin-bottom: 64px;
+  overflow: hidden;
+}
+
+.resume-photo{
+  grid-area: photo;
+  width: 148px;
+  height: 148px;
+  border-radius: 20px;
+  background: var(--kinari-deep);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color: var(--sumi);
+  opacity: .45;
+}
+.resume-photo svg{ width: 56px; height: 56px; }
+
+.resume-identity{
+  grid-area: identity;
+  align-self:start;
+}
+
+.resume-identity h1{
+  font-family:"Shippori Mincho B1", serif;
+  font-weight:700;
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+
+.resume-romaji{
+  display:block;
+  font-size: 11px;
+  letter-spacing:.16em;
+  opacity:.5;
+  margin-bottom: 14px;
+}
+
+.resume-contact{
+  list-style:none;
+  font-size: 12px;
+  line-height:1.9;
+  opacity:.75;
+}
+.resume-contact a{
+  color: var(--sumi);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.resume-columns{
+  grid-area: columns;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px 40px;
+}
+
+.resume-block h2{
+  font-family:"Shippori Mincho B1", serif;
+  font-weight:700;
+  font-size: 13px;
+  letter-spacing:.08em;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(38,38,38,0.1);
+}
+
+.resume-tagline{
+  font-family:"Shippori Mincho B1", serif;
+  font-weight:700;
+  font-size: 14.5px;
+  margin-bottom: 10px;
+}
+
+.resume-block p{
+  font-size: 12.5px;
+  line-height:1.9;
+  opacity:.75;
+}
+
+.resume-list div{
+  display:flex;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 12.5px;
+}
+.resume-list dt{
+  flex: 0 0 auto;
+  opacity:.5;
+  min-width: 74px;
+}
+.resume-list dd{ opacity:.85; }
+
+.resume-skills{
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+}
+.resume-skill{
+  display:grid;
+  grid-template-columns: 76px 1fr;
+  align-items:center;
+  gap: 12px;
+}
+.resume-skill span{
+  font-size: 11.5px;
+  opacity:.7;
+}
+.resume-skill .skill-bar{
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(38,38,38,0.08);
+  overflow:hidden;
+}
+.resume-skill .skill-bar span[style]{
+  display:block;
+  height:100%;
+  background: var(--ai);
+  border-radius: inherit;
+}
+
+/* ================= セクション共通 ================= */
+.about-section{
+  margin-bottom: 56px;
+}
+
+.about-section h2{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  font-family:"Shippori Mincho B1", serif;
+  font-weight:700;
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.about-num{
+  font-family:"Zen Kaku Gothic New", sans-serif;
+  font-size: 11px;
+  font-weight:700;
+  letter-spacing:.1em;
+  opacity:.4;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+/* ================= プロフィール定義リスト ================= */
+.about-meta{
+  display:grid;
+  grid-template-columns: 140px 1fr;
+  row-gap: 18px;
+  column-gap: 24px;
+}
+.about-meta > div{
+  display: contents;
+}
+.about-meta dt{
+  font-size: 12px;
+  letter-spacing:.08em;
+  opacity:.5;
+  padding-top: 2px;
+}
+.about-meta dd{
+  font-size: 13.5px;
+  line-height:1.8;
+}
+.about-meta a{
+  color: var(--sumi);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ================= タイムライン ================= */
+.timeline{
+  position:relative;
+  list-style:none;
+  padding-left: 22px;
+  border-left: 1px solid rgba(38,38,38,0.14);
+}
+.timeline li{
+  position:relative;
+  padding-bottom: 30px;
+}
+.timeline li:last-child{ padding-bottom: 0; }
+
+.timeline-dot{
+  position:absolute;
+  left: -27px;
+  top: 4px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--ai);
+}
+
+.timeline-year{
+  display:block;
+  font-family:"Shippori Mincho B1", serif;
+  font-weight:700;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.timeline p{
+  font-size: 13px;
+  line-height:1.85;
+  opacity:.75;
+  max-width: 42em;
+}
+
+/* ================= 大事にしていること ================= */
+.value-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.value-card{
+  background: var(--kinari);
+  border-radius: 16px;
+  padding: 22px 22px 24px;
+  box-shadow: 0 1px 0 rgba(38,38,38,0.05);
+}
+
+.value-title{
+  display:block;
+  font-family:"Shippori Mincho B1", serif;
+  font-weight:700;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.value-card p{
+  font-size: 12.5px;
+  line-height:1.85;
+  opacity:.7;
+}
+
+/* ================= CTA ================= */
+.about-cta{
+  text-align:center;
+  padding: 48px 24px;
+  border-top: 1px solid rgba(38,38,38,0.1);
+}
+.about-cta p{
+  font-size: 13px;
+  opacity:.7;
+  margin-bottom: 18px;
+}
+
+/* ================= レスポンシブ ================= */
+@media (max-width: 700px){
+  .about-main{ padding: 32px 18px 80px; }
+  .resume-card{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "photo"
+      "identity"
+      "columns";
+    padding: 32px 24px;
+  }
+  .about-watermark{ font-size: 140px; }
+  .resume-photo{ width: 100px; height: 100px; border-radius: 16px; }
+  .resume-columns{ grid-template-columns: 1fr; gap: 28px; }
+  .about-meta{ grid-template-columns: 1fr; row-gap: 6px; }
+  .about-meta dt{ opacity:.45; margin-top: 10px; }
+}
 
 
 
