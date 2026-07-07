@@ -4,9 +4,9 @@
   --kinari: #262626;
   --kinari-deep: #262626;
   --sumi: #262626;
-  --ai: #ffedab;
-  --beni: #ffedab;
-  --outo: #ffedab;
+  --ai: rgb(0, 42, 255);
+  --beni: rgb(255, 111, 0);
+  --outo: rgb(16, 255, 92);
 }
 
 * {
@@ -213,7 +213,7 @@ h1 .accent {
 }
 
 .card:nth-child(3) {
-  --tone: var(--ai);
+  --tone:rgb(151, 229, 255);
   animation-delay: .25s;
   z-index: 3;
 }
@@ -375,7 +375,7 @@ h1 .accent {
 
 .skill-card {
   --tone: var(--ai);
-  background: #ccc;
+  background:#ffedab;
   border-radius: 16px;
   padding: 20px 22px;
   box-shadow: 0 1px 0 rgba(38, 38, 38, 0.05);
@@ -421,14 +421,12 @@ h1 .accent {
   letter-spacing: .04em;
   padding: 8px 16px;
   border-radius: 999px;
-  background: #ccc;
+  background: #ffedab;
   box-shadow: 0 1px 0 rgba(38, 38, 38, 0.05);
 }
 
 .skill-section--highlight {
-  background: rgba(248, 100, 57, 0.06);
   border-radius: 20px;
-  padding: 28px 28px 32px;
 }
 
 .skill-note {
@@ -568,7 +566,7 @@ body.works-body {
   align-items: center;
   justify-content: space-between;
   padding: 20px 32px;
-  background: #ffedab;
+  background:  white;
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(38, 38, 38, 0.08);
 }
@@ -920,10 +918,13 @@ body.works-body {
 .gallery-item{
   --tone: var(--ai);
   height: 400px;
-  border-radius: 14px;
-  background: var(--tone);
   opacity: .85;
 }
+
+.gallery-item img{
+    border-radius: 14px;
+}
+
 .gallery-note{
   font-size: 11px;
   opacity:.45;
