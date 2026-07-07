@@ -307,7 +307,7 @@ h1 .accent {
   white-space: nowrap;
   opacity: 0;
   transform: translateX(8px);
-  transition: opacity .3s ease .1s, transform .35s ease .1s;
+  transition: opacity .2s ease .1s, transform .35s ease .1s;
 }
 
 .card:hover .card-en,
@@ -853,7 +853,7 @@ body.works-body {
 }
 
 .detail-section h2{
-  font-family:"Shippori Mincho B1", serif;
+   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight:700;
   font-size: 18px;
   margin-bottom: 18px;
@@ -1333,19 +1333,14 @@ body.works-body {
   overflow: hidden;
 }
 
-.resume-photo{
+.resume-photo img{
   grid-area: photo;
-  width: 148px;
-  height: 148px;
+  width: 200px;
   border-radius: 20px;
-  background: var(--kinari-deep);
   display:flex;
   align-items:center;
   justify-content:center;
-  color: var(--sumi);
-  opacity: .45;
 }
-.resume-photo svg{ width: 56px; height: 56px; }
 
 .resume-identity{
   grid-area: identity;
