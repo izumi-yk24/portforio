@@ -147,7 +147,6 @@ h1 .accent {
   margin-top: 6px;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
   padding: 12px 26px;
   background: var(--pp);
   color: var(--sumi);
@@ -583,6 +582,11 @@ body.works-body {
   opacity: .8;
 }
 
+.works-header img{
+  width: 25%;
+  margin-left: 5%;
+}
+
 /* 小さいカードナビ（TOPの.stackを横並び・小型化したバージョン） */
 .mini-stack {
   display: flex;
@@ -735,7 +739,6 @@ body.works-body {
   font-size: 10px;
   letter-spacing: .14em;
   font-weight: 700;
-  color: var(--tone);
   filter: brightness(.7);
 }
 
@@ -782,12 +785,16 @@ body.works-body {
 .works-bottom-wrapper {
   display: flex;
   gap: 24px;
-  /* 横並びの間隔 */
+  align-items: stretch; 
 }
 
 .works-side {
   flex: 1;
-  /* 左右で均等に幅を取る */
+ display: flex;  
+}
+
+.works-side .work-card {
+  flex: 1;   
 }
 
 /* ================= レスポンシブ ================= */
@@ -1264,12 +1271,17 @@ body.works-body {
 
 .banner-gallery {
   margin-bottom: 24px;
+    grid-template-columns: 1fr; 
 }
 
 .banner-gallery img {
-  width: 100%;
+  width: 60%;
   height: auto;
   box-shadow: 0 1px 0 rgba(38, 38, 38, 0.05);
+}
+
+.banner-gallery img.lb {
+  width: 100%;  
 }
 
 /* ================= コーポレートカラー チップ ================= */
