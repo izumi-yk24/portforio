@@ -20,6 +20,7 @@ body {
   overflow: hidden;
   font-family: "Zen Kaku Gothic New", sans-serif;
   color: var(--sumi);
+  background: #FFFDEA;
 }
 
 .top {
@@ -550,7 +551,7 @@ h1 .accent {
   }
 }
 
-/* works.css: WORKページ専用。style.css の共通トークン(--kinari等)を前提にしてます */
+/* works.css: WORKページ専用 */
 html.works-page,
 body.works-body {
   height: auto;
@@ -617,7 +618,7 @@ body.works-body {
 .mini-card.is-current {
   opacity: 1;
   background: white;
-  color: var(--kinari);
+  color: var(--sumi);
 }
 
 .mini-num {
@@ -847,7 +848,7 @@ body.works-body {
 /* ================= ヒーロー ================= */
 .detail-hero {
   --tone: var(--ai);
-  color: var(--kinari);
+  color: var(--ai);
   border-radius: 24px;
   margin-bottom: 40px;
 }
@@ -1375,13 +1376,17 @@ body.works-body {
   overflow: hidden;
 }
 
-.resume-photo img {
+.resume-photo{
   grid-area: photo;
+}
+
+.resume-photo img {
+  
   width: 200px;
   border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+   object-fit: cover; 
+ border-radius: 20px;
+  display: block;
 }
 
 .resume-identity {
