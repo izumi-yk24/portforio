@@ -435,7 +435,7 @@ h1 .accent {
   font-size: 13px;
   line-height: 1.9;
   opacity: .75;
-  max-width: 42em;
+  max-width: 60em;
 }
 
 @media (max-width: 640px) {
@@ -929,7 +929,7 @@ body.works-body {
 }
 
 .link-list a {
-  font-size: 12.5px;
+  font-size: 15px;
   color: var(--sumi);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -1200,34 +1200,6 @@ body.works-body {
   max-width: 42em;
 }
 
-/* ================= 大事にしていること ================= */
-.value-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-}
-
-.value-card {
-  background: var(--kinari);
-  border-radius: 16px;
-  padding: 22px 22px 24px;
-  box-shadow: 0 1px 0 rgba(38, 38, 38, 0.05);
-}
-
-.value-title {
-  display: block;
-  font-family: "Zen Kaku Gothic New", sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  margin-bottom: 10px;
-}
-
-.value-card p {
-  font-size: 12.5px;
-  line-height: 1.85;
-  opacity: .7;
-}
-
 /* ================= CTA ================= */
 .about-cta {
   text-align: center;
@@ -1264,7 +1236,6 @@ body.works-body {
   height: 24px;
   border-radius: 50%;
   background: var(--tone);
-  color: var(--kinari);
   font-size: 12px;
   font-weight: 700;
 }
@@ -1623,33 +1594,6 @@ body.works-body {
   max-width: 42em;
 }
 
-/* ================= 大事にしていること ================= */
-.value-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-}
-
-.value-card {
-  background: var(--kinari);
-  border-radius: 16px;
-  padding: 22px 22px 24px;
-  box-shadow: 0 1px 0 rgba(38, 38, 38, 0.05);
-}
-
-.value-title {
-  display: block;
-  font-family: "Zen Kaku Gothic New", sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  margin-bottom: 10px;
-}
-
-.value-card p {
-  font-size: 12.5px;
-  line-height: 1.85;
-  opacity: .7;
-}
 
 /* ================= CTA ================= */
 .about-cta {
