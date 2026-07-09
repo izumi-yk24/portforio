@@ -1248,6 +1248,11 @@ body.works-body {
   font-size: 12.5px;
 }
 
+.resume-list div.resume-list-stack {
+  flex-direction: column;  
+  gap: 6px;  
+}
+
 .resume-list dt {
   flex: 0 0 auto;
   opacity: .5;
