@@ -131,9 +131,9 @@ h1 .accent {
   color: var(--ai);
 }
 
-.hero-logo{
-  max-width: 650px;   
-  height: auto;      
+.hero-logo {
+  max-width: 650px;
+  height: auto;
   display: block;
 }
 
@@ -439,118 +439,6 @@ h1 .accent {
   max-width: 60em;
 }
 
-@media (max-width: 640px) {
-  .skill-section--highlight {
-    padding: 20px;
-  }
-}
-
-/* ---- レスポンシブ：1画面固定を維持しつつ縮小 ---- */
-@media (max-width: 860px) {
-  .top {
-    padding: 14px;
-    gap: 10px;
-  }
-
-  .card-main {
-    padding: 0 6vw;
-    border-radius: 22px;
-  }
-
-  .card {
-    width: 56px;
-    margin-left: -22px;
-    border-radius: 18px;
-  }
-
-  .card:hover,
-  .card:focus-visible {
-    width: 120px;
-  }
-
-  .card-label {
-    font-size: 14px;
-  }
-
-  .card-en {
-    font-size: 16px;
-    left: 46px;
-  }
-
-  .year {
-    display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .top {
-    padding: 10px;
-    gap: 8px;
-  }
-
-  .card-main {
-    padding: 0 20px;
-    border-radius: 18px;
-  }
-
-  .mark {
-    display: none;
-  }
-
-  .card-index {
-    font-size: 10px;
-  }
-
-  .lead {
-    font-size: 12px;
-  }
-
-  .cta {
-    padding: 10px 20px;
-    font-size: 12px;
-  }
-
-  .card {
-    width: 44px;
-    margin-left: -18px;
-    border-radius: 14px;
-  }
-
-  .card:hover,
-  .card:focus-visible {
-    width: 98px;
-  }
-
-  .card-num {
-    width: 18px;
-    height: 18px;
-    font-size: 9px;
-  }
-
-  .card-jp {
-    display: none;
-  }
-
-  .card-label {
-    font-size: 12px;
-    bottom: 14px;
-    left: 12px;
-  }
-
-  .card-icon {
-    width: 26px;
-    height: 26px;
-    right: 12px;
-    bottom: 12px;
-  }
-
-  .card-en {
-    font-size: 13px;
-    left: 38px;
-    bottom: 15px;
-  }
-}
-
 /* works.css: WORKページ専用 */
 html.works-page,
 body.works-body {
@@ -583,12 +471,12 @@ body.works-body {
   opacity: .8;
 }
 
-.works-header img{
+.works-header img {
   width: 25%;
   margin-left: 5%;
 }
 
-/* 小さいカードナビ（TOPの.stackを横並び・小型化したバージョン） */
+/* 小さいカードナビ */
 .mini-stack {
   display: flex;
   gap: 6px;
@@ -670,7 +558,7 @@ body.works-body {
   content: "";
   width: 24px;
   height: 1px;
-  background: var(--yellow); 
+  background: var(--yellow);
 }
 
 .works-intro h1 {
@@ -723,10 +611,6 @@ body.works-body {
 
 .work-thumb img {
   height: 100%;
-  /* width: 100%;
-     height: 100%;
-     object-fit: cover;  
-     object-position: top;   */
 }
 
 .work-body {
@@ -786,35 +670,20 @@ body.works-body {
 .works-bottom-wrapper {
   display: flex;
   gap: 24px;
-  align-items: stretch; 
+  align-items: stretch;
 }
 
 .works-side {
   flex: 1;
- display: flex;  
+  display: flex;
 }
 
 .works-side .work-card {
-  flex: 1;   
+  flex: 1;
 }
 
-/* ================= レスポンシブ ================= */
-@media (max-width: 700px) {
-  .detail-main {
-    padding: 28px 18px 80px;
-  }
 
-  .detail-hero {
-    padding: 32px 24px;
-  }
-
-  .detail-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-}
-
-/* work-detail.css: 作品詳細ページ専用。style.css / works.css の後に読み込む前提 */
+/* work-detail.css: 作品詳細ページ専用 */
 
 .detail-main {
   max-width: 900px;
@@ -1026,15 +895,7 @@ body.works-body {
   font-size: 14px;
 }
 
-/* about.css: ABOUTページ専用。style.css / works.css の後に読み込む前提 */
-
-.about-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 32px 100px;
-}
-
-/* ================= ヒーロー：大きな縦書き watermark が一点だけの主張要素 ================= */
+/* ================= ヒーロー================= */
 .about-hero {
   position: relative;
   padding: 72px 0 56px;
@@ -1243,7 +1104,7 @@ body.works-body {
 
 .banner-gallery {
   margin-bottom: 24px;
-    grid-template-columns: 1fr; 
+  grid-template-columns: 1fr;
 }
 
 .banner-gallery img {
@@ -1253,7 +1114,7 @@ body.works-body {
 }
 
 .banner-gallery img.lb {
-  width: 100%;  
+  width: 100%;
 }
 
 /* ================= コーポレートカラー チップ ================= */
@@ -1278,80 +1139,8 @@ body.works-body {
   vertical-align: middle;
 }
 
-/* ================= レスポンシブ ================= */
-@media (max-width: 700px) {
-  .detail-main {
-    padding: 28px 18px 80px;
-  }
 
-  .detail-hero {
-    padding: 32px 24px;
-  }
-
-  .detail-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .banner-variant {
-    padding-left: 16px;
-  }
-}
-
-
-
-/* ================= レスポンシブ ================= */
-@media (max-width: 700px) {
-  .detail-main {
-    padding: 28px 18px 80px;
-  }
-
-  .detail-hero {
-    padding: 32px 24px;
-  }
-
-  .detail-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .banner-variant {
-    padding-left: 16px;
-  }
-}
-
-
-
-
-
-
-/* ================= レスポンシブ ================= */
-@media (max-width: 700px) {
-  .about-main {
-    padding: 0 18px 80px;
-  }
-
-  .about-hero {
-    padding: 48px 0 40px;
-  }
-
-  .about-watermark {
-    font-size: 160px;
-  }
-
-  .about-meta {
-    grid-template-columns: 1fr;
-    row-gap: 6px;
-  }
-
-  .about-meta dt {
-    opacity: .45;
-    margin-top: 10px;
-  }
-}
-
-
-/* about.css: ABOUTページ専用。style.css / works.css の後に読み込む前提 */
+/* about.css: ABOUTページ*/
 
 .about-main {
   max-width: 960px;
@@ -1376,16 +1165,16 @@ body.works-body {
   overflow: hidden;
 }
 
-.resume-photo{
+.resume-photo {
   grid-area: photo;
 }
 
 .resume-photo img {
-  
+
   width: 200px;
   border-radius: 20px;
-   object-fit: cover; 
- border-radius: 20px;
+  object-fit: cover;
+  border-radius: 20px;
   display: block;
 }
 
@@ -1614,9 +1403,13 @@ body.works-body {
 }
 
 /* ================= レスポンシブ ================= */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .about-main {
     padding: 32px 18px 80px;
+  }
+
+  .hero-logo {
+    width: 80%;
   }
 
   .resume-card {
@@ -1628,6 +1421,10 @@ body.works-body {
     padding: 32px 24px;
   }
 
+  .gallery-item img {
+    width: 90%;
+  }
+
   .about-watermark {
     font-size: 140px;
   }
@@ -1636,6 +1433,14 @@ body.works-body {
     width: 100px;
     height: 100px;
     border-radius: 16px;
+  }
+
+  .resume-identity h1 {
+    margin-top: 180px;
+  }
+
+  .resume-block p{
+    margin-top: 10px;
   }
 
   .resume-columns {
@@ -1654,13 +1459,191 @@ body.works-body {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
 
+  .card,
+  .card-icon,
+  .card-en,
+  .cta {
+    transition: none;
+    animation: none;
+  }
+}
 
+@media (max-width: 768px) {
 
+  /* ---- TOPページ ---- */
+  .top {
+    padding: 14px;
+    gap: 10px;
+  }
 
+  .card-main {
+    padding: 0 6vw;
+    border-radius: 22px;
+  }
 
-/* ---- レスポンシブ ---- */
-@media (max-width: 640px) {
+  .card {
+    width: 56px;
+    margin-left: -22px;
+    border-radius: 18px;
+  }
+
+  .card:hover,
+  .card:focus-visible {
+    width: 120px;
+  }
+
+  .card-label {
+    font-size: 14px;
+  }
+
+  .card-en {
+    font-size: 16px;
+    left: 46px;
+  }
+
+  .year {
+    display: none;
+  }
+
+  .skill-section--highlight {
+    padding: 20px;
+  }
+
+  /* ---- WORK詳細ページ ---- */
+  .detail-main {
+    padding: 28px 18px 80px;
+  }
+
+  .detail-hero {
+    padding: 32px 24px;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .banner-variant {
+    padding-left: 16px;
+  }
+
+  /* ---- ABOUTページ ---- */
+  .about-main {
+    padding: 32px 18px 80px;
+  }
+
+  .about-hero {
+    padding: 48px 0 40px;
+  }
+
+  .about-watermark {
+    font-size: 160px;
+  }
+
+  .about-meta {
+    grid-template-columns: 1fr;
+    row-gap: 6px;
+  }
+
+  .about-meta dt {
+    opacity: .45;
+    margin-top: 10px;
+  }
+
+  .resume-card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "photo"
+      "identity"
+      "columns";
+    padding: 32px 24px;
+  }
+
+  .resume-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
+  }
+
+  .resume-columns {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 440px) {
+
+  /* ---- TOPページ ---- */
+  .top {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .card-main {
+    padding: 0 20px;
+    border-radius: 18px;
+  }
+
+  .mark {
+    display: none;
+  }
+
+  .card-index {
+    font-size: 10px;
+  }
+
+  .lead {
+    font-size: 12px;
+  }
+
+  .cta {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .card {
+    width: 44px;
+    margin-left: -18px;
+    border-radius: 14px;
+  }
+
+  .card:hover,
+  .card:focus-visible {
+    width: 98px;
+  }
+
+  .card-num {
+    width: 18px;
+    height: 18px;
+    font-size: 9px;
+  }
+
+  .card-jp {
+    display: none;
+  }
+
+  .card-label {
+    font-size: 12px;
+    bottom: 14px;
+    left: 12px;
+  }
+
+  .card-icon {
+    width: 26px;
+    height: 26px;
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .card-en {
+    font-size: 13px;
+    left: 38px;
+    bottom: 15px;
+  }
+
+  /* ---- WORKページ（ヘッダー・一覧） ---- */
   .works-header {
     padding: 14px 18px;
     flex-wrap: wrap;
