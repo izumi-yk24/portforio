@@ -3,7 +3,7 @@
 Web制作・デザインの学習を通して制作した、個人ポートフォリオサイトです。
 「和」の意匠(生成り・墨・紅・藍)をベースに、余白と縦組みタイポグラフィを活かしたデザインを目指しました。
 
-🔗 **Live Site**: https://izumi-yk24.github.io/
+🔗 **Live Site**: https://izumi-yk24.github.io/portforio/
 
 ---
 
